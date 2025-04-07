@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Study Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #6200ea;
+        }
+
+        .hero {
+            background-color:  #008CBA;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+           
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+       
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color:  #008CBA;
+            margin-bottom: 10px;
+        }
+
+        .card button {
+            background-color:  #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #008CBA;
+        }
+/* Contact Section */
+#contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer .inline {
+    margin-top: 20px;
+    display: flex; /* Added this to make the links align in one line */
+    justify-content: center; /* Centers the links */
+    gap: 15px; /* Adds space between the links */
+}
+
+.container-4{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Social Media Links */
+footer a {
+	move:down;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    footer {
+        font-size: 12px;
+    }
+
+    footer .inline {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Adjusted for mobile */
+    }
+
+    footer a {
+        margin: 0 5px; /* Smaller margin on mobile */
+    }
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* Styling for the nav container */
+    nav.nav-menu {
+     background-color: #333; /* Black background */
+     border-radius: 8px; /* Rounded corners */
+     padding: 10px 20px; /* Comfortable padding */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+     text-align: center; /* Center align items */
+     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+
+    /* Styling for the unordered list */
+    nav.nav-menu ul {
+     list-style-type: none; /* Remove bullets */
+     margin: 0; /* Reset default margin */
+     padding: 0; /* Reset default padding */
+     display: flex; /* Horizontal layout */
+     justify-content: center; /* Center the menu items */
+     gap: 20px; /* Add space between menu items */
+    }
+
+    /* Styling for list items */
+    nav.nav-menu ul li {
+     margin: 0; /* Reset margin */
+    }
+
+    /* Styling for links inside the nav */
+    nav.nav-menu ul li a {
+     text-decoration: none; /* Remove underline */
+     color: white; /* White text for contrast */
+     font-size: 16px; /* Readable font size */
+     font-weight: 600; /* Semi-bold for better emphasis */
+     display: block; /* Make links behave like block elements */
+     padding: 8px 16px; /* Add padding for clickable area */
+     border-radius: 6px; /* Rounded corners */
+     transition: all 0.3s ease; /* Smooth hover effect */
+    }
+
+    /* Hover effect for links */
+    nav.nav-menu ul li a:hover {
+     background-color: #333; /* Slightly lighter black on hover */
+     color: #cce7ff; /* Lighter text on hover */
+     box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3); /* Subtle shadow on hover */
+    }
+
+    /* Selected (active) link styling */
+    nav.nav-menu ul li a.selected {
+     color: white; /* White text for contrast */
+     font-weight: bold; /* Bold text for emphasis */
+    }
+
+    /* Focused link for accessibility */
+    nav.nav-menu ul li a:focus {
+		background-color:blue;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 600px) {
+     nav.nav-menu ul {
+      flex-direction: column; /* Stack items vertically on small screens */
+      gap: 10px; /* Adjust spacing */
+     }
+
+     nav.nav-menu ul li a {
+      font-size: 14px; /* Smaller font for mobile */
+      padding: 8px 12px; /* Adjust padding for mobile */
+     }
+    }
+	/* General Navigation Styles */
+.nav-menu {
+  background-color: #2c3e50; /* Dark background for the nav */
+  font-family: 'Arial', sans-serif; /* Clean font */
+  font-size: 16px; /* Readable font size */
+  color: #ffffff; /* White text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-menu ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+  display: flex; /* Flex for horizontal layout */
+  justify-content: center; /* Center items */
+  align-items: center; /* Align vertically */
+}
+
+.nav-menu ul li {
+  position: relative; /* For dropdown positioning */
+  margin: 0 10px; /* Space between items */
+}
+
+.nav-menu ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* White text */
+  padding: 10px 15px; /* Padding for clickable area */
+  display: block; /* Block-level for easy styling */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+.nav-menu ul li a:hover {
+  background-color: #34495e; /* Darker background on hover */
+  color: #1abc9c; /* Highlight text color */
+}
+
+/* Dropdown Menu Styles */
+.nav-menu ul li ul {
+  display: none; /* Hide by default */
+  position: absolute; /* Position relative to parent */
+  top: 100%; /* Below the parent */
+  left: 0;
+  background-color: #34495e; /* Dropdown background */
+  padding: 10px 0; /* Space for dropdown items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  z-index: 1000; /* Ensure it’s above other elements */
+}
+
+.nav-menu ul li:hover ul {
+  display: block; /* Show on hover */
+}
+
+.nav-menu ul li ul li {
+  width: 200px; /* Dropdown width */
+}
+
+.nav-menu ul li ul li a {
+  padding: 10px 15px; /* Same padding for dropdown links */
+  white-space: nowrap; /* Prevent text wrap */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Left-align items */
+  }
+
+  .nav-menu ul li ul {
+    position: static; /* Remove absolute positioning */
+  }
+}
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo-container">
+        <img src="https://github.com/AbdulAzizes04/skills-github-pages/blob/main/.github/WhatsApp%20Image%202025-01-01%20at%2022.11.52_7937caa6.jpg?raw=true" alt="Study Cafe Logo" class="logo">
+        <h1>STUDY CAFE</h1>
+    </div>
+     <nav class="nav-menu">
+    <ul>
+      <li>
+        <a href="web.html">Home</a>
+      </li>
+	   <li>
+        <a href="first-year.html">1ST YEAR</a>
+      </li>
+      <li>
+        <center><a href="branch.html">1ST YEAR ▼</a></center>
+        <ul>
+          <li><a href="secondcse.html" id="cse">CSE</a></li>
+          <li><a href="secondaids.html" id="aids">AI&DS</a></li>
+          <li><a href="secondaiml.html" id="aiml">AI&ML</a></li>
+		   <li><a href="secondds.html" id="ds">CSE(DS)</a></li>
+          <li><a href="secondai.html"id="ai">CSE(AI)</a></li>
+		  <li><a href="secondai.html"id="civil">CIVIL</a></li>
+		  <li><a href="secondai.html"id="mech">MECH</a></li>
+		  <li><a href="secondai.html"id="eee">EEE</a></li>
+		  <li><a href="secondai.html"id="ece">ECE</a></li>
+        </ul>
+      </li>
+      <li>
+        <center><a href="branch1.html">3RD YEAR ▼</a></center>
+		<ul>
+          <li><a href="thirdcse.html" id="cse">CSE</a></li>
+          <li><a href="thirdaids.html" id="aids">AI&DS</a></li>
+          <li><a href="thirdaiml.html" id="aiml">AI&ML</a></li>
+		   <li><a href="thirdds.html" id="ds">CSE(DS)</a></li>
+          <li><a href="thirdai.html"id="ai">CSE(AI)</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="branch2.html">4TH YEAR ▼</a>
+		<ul>
+          <li><a href="fourthcse.html" id="cse">CSE</a></li>
+          <li><a href="fourthaids.html" id="aids">AI&DS</a></li>
+          <li><a href="fourthaiml.html" id="aiml">AI&ML</a></li>
+		   <li><a href="fourthds.html" id="ds">CSE(DS)</a></li>
+          <li><a href="fourthai.html"id="ai">CSE(AI)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    <div class="hero">
+        <h2>Welcome to Second Year Engineering</h2>
+        <p>Explore your chosen branch and access resources for your second year of engineering studies.</p>
+    </div>
+
+    <div class="container">
+        <div class="card" id="COMPUTER SCIENCE">
+            <h3>Computer Science Engineering</h3>
+            <a href="secondcse.html"><button>View</button></a>
+        </div>
+        <div class="card" id="AI&DS">
+            <h3>Artificial Intelligence & Data Science</h3>
+            <a href="secondaids.html"><button>View</button></a>
+        </div>
+        <div class="card" id="AI&ML">
+            <h3>Artificial Intelligence & Machine Learning</h3>
+            <a href="secondaiml.html"><button>View</button></a>
+        </div>
+        <div class="card" id="CSE(DS)">
+            <h3>Computer Science Engineering (Data Science)</h3>
+            <a href="secondds.html"><button>View</button></a>
+        </div>
+        <div class="card" id="CSE(AI)">
+            <h3>Computer Science Engineering (Artificial Intelligence)</h3>
+            <a href="secondai.html"><button>View</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Study Cafe | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
